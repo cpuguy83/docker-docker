@@ -10,7 +10,8 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D78692
 
 RUN apt-get update && apt-get install -y lxc-docker \
   && apt-get install -y lxc-docker-$DOCKER_VERSION
-RUN chmod +x /usr/bin/docker
+
 COPY wrap_docker.sh /usr/bin/wrap_docker
+
 ENTRYPOINT ["/usr/bin/wrap_docker"]
 CMD ["-d"]
