@@ -1,5 +1,5 @@
 FROM debian:wheezy
-ENV DOCKER_VERSION 1.4.1
+ENV DOCKER_VERSION 1.5.0
 ENV DOCKER_REPO get
 
 RUN echo deb http://${DOCKER_REPO}.docker.com/ubuntu docker main > /etc/apt/sources.list.d/docker.list
